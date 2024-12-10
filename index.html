@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Whats my Fantasy Name</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -12,11 +12,58 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 </head>
 
-<body>
+<body class="bg-dark">
     <header>
         <!-- place navbar here -->
     </header>
-    <main></main>
+    <main>
+        <!-- ========== intro and greetings ========== -->
+
+
+        <div class="container text-light">
+            <div class="text-center mb-4">
+                <h1 class="text-light">Whats your Fantasy hero name?</h1>
+                <p class="text-light">fill out form </p>
+            </div>
+
+            <!-- ========== form ========== -->
+            <form id="fantform" class="mb-4">
+                <div class="mb-3">
+                    <label for="firstname" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstname" placeholder="Enter Your First Name">
+                </div>
+                <div class="mb-3">
+                    <label for="lastname" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastname" placeholder="Enter Your Last Name">
+                </div>
+                <!-- ========== get road type ========== -->
+                <div class="mb-3">
+                    <label for="roadtype" class="form-label"> choose road type</label>
+                    <select name="roadtype" id="roadType" class="form-select">
+                        <option value="road">Road</option>
+                        <option value="street">Street</option>
+                        <option value="drive">Drive</option>
+                        <option value="court">Court</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="favoritecolor" class="form-label">Favorite color</label>
+                    <input type="text" class="form-control" id="favoritecolor" placeholder="Enter Your Favorite Color">
+                </div>
+                <div class="mb-3">
+                    <label for="favanimal" class="form-label">Favorite Animal</label>
+                    <input type="text" class="form-control" id="favanimal" placeholder="Enter Your Favorite Animal">
+                </div>
+                <button type="submit" class="btn btn-primary w-100" id="btn"> </button>
+            </form>
+        </div>
+
+
+
+
+
+    </main>
     <footer>
         <!-- place footer here -->
     </footer>
