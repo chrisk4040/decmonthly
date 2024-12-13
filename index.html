@@ -29,12 +29,12 @@
             <!-- ========== form ========== -->
             <form id="fantform" class="mb-4">
                 <div class="mb-3">
-                    <label for="firstname" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="firstname" placeholder="Enter Your First Name">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter Your First Name">
                 </div>
                 <div class="mb-3">
-                    <label for="lastname" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="lastname" placeholder="Enter Your Last Name">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Enter Your Last Name">
                 </div>
                 <!-- ========== get road type ========== -->
                 <div class="mb-3">
@@ -49,15 +49,27 @@
                 </div>
                 <div class="mb-3">
                     <label for="favoritecolor" class="form-label">Favorite color</label>
-                    <input type="text" class="form-control" id="favoritecolor" placeholder="Enter Your Favorite Color">
+                    <input type="text" class="form-control" id="favoriteColor" placeholder="Enter Your Favorite Color">
                 </div>
                 <div class="mb-3">
                     <label for="favanimal" class="form-label">Favorite Animal</label>
-                    <input type="text" class="form-control" id="favanimal" placeholder="Enter Your Favorite Animal">
+                    <input type="text" class="form-control" id="favAnimal" placeholder="Enter Your Favorite Animal">
                 </div>
-                <button type="submit" class="btn btn-primary w-100" id="btn" onclick="genFullName"> </button>
+                <div type="submit" class="btn btn-primary w-100" id="btn" onclick="genFullName()"> Generate Name
+                </div>
             </form>
+
+
+
         </div>
+
+        <!-- ========== display box ========== -->
+
+        <div id="result" class="text-light text-center"></div>
+
+
+
+        <!-- =========display box ========== -->
 
 
 

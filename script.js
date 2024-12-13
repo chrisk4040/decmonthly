@@ -2,7 +2,7 @@
 
 
 
-function genPrefix (firstname){
+function genPrefix (firstName){
     if (firstName.length > 4) {
         return 'the Great'
     } else {
@@ -13,7 +13,7 @@ function genPrefix (firstname){
 
 //gen firstname of name 
 function genFirstName (firstName) {
-  const firstLetter = firstname.CharAt(0).toLowercase()
+  const firstLetter = firstName.CharAt(0).toLowercase()
   if (firstLetter === 'a') {
     return 'Jeff'
 } else if(firstLetter === 'b') {
@@ -35,19 +35,21 @@ return 'dom'
 //gen middle name 
 
 function genMiddleName (roadType, favColor, ) {
-if (roadType === 'road'){
-    return ${favColor}ridge
-} else if (roadType === 'street') {
-    return ${favColor}son
-} else if (roadType === 'ave'){
-    return ${favColor}view
+if (roadType === 'Road'){
+    return `${favColor}ridge`
+} else if (roadType === 'Street') {
+    return `${favColor}son`
+} else if (roadType === 'Drive'){
+    return `${favColor}view`
+} else if (roadType === 'Court') {
+    return `${favColor}park`
 } else {
-    return ${favColor}park
+    return `${favColor}lane`
 }
 }
 
-function getLastName (lastname){
-    const lastLetter = lastname.charAt(lastName.length-1).toLowercase()
+function getLastName (lastName){
+    const lastLetter = lastName.charAt(lastName.length-1).toLowercase()
 if (lastLetter === 'a'){
     return 'shadow'
 } else if(lastLetter === 'b'){
@@ -70,11 +72,13 @@ function genSuffix (favAnimal){
 
 //master function to Assemble FUll Name 
 function genFullName () {
-const firstName = document.getElementById('firstname').ariaValueMax.trim()
-const lastName = document.getElementById('lastname').ariaValueMax.trim()
-const roadType = document.getElementById('roadType').ariaValueMax.trim()
-const favColor = document.getElementById('favoritecolor').ariaValueMax.trim()
-const favAnimal = document.getElementById('favanimal').ariaValueMax.trim()
+
+
+const firstName = document.getElementById('firstName').value.trim()
+const lastName = document.getElementById('lastName').value.trim()
+const roadType = document.getElementById('roadType').value.trim()
+const favColor = document.getElementById('favoriteColor').value.trim()
+const favAnimal = document.getElementById('favAnimal').value.trim()
 
 //gen each part of the name usin helper func
 
@@ -84,9 +88,23 @@ const MiddleName = genMiddleName(roadType, favColor)
 const newLastName = getLastName(lastName)
 const suffix = genSuffix(favAnimal)
 
+//functions to cap
+const capFix = capitalize(prefix)
+const capFirst = capitalize(newFirstName)
+const capMid = capitalize(MiddleName)
+const capLastname = capitalize(newLastName)
+const capSuffix = capitalize(suffix)
 
+const fullName = `${capFix} ${capFirst} ${capMid} ${capLastname} ${capSuffix}`
 
+document.getElementById('result').textContent = fullName
 
+}
 
+//capitalizer
+
+function Capitalize (word) {
+
+return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
 
 }
