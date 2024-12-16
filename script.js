@@ -13,7 +13,7 @@ function genPrefix (firstName){
 
 //gen firstname of name 
 function genFirstName (firstName) {
-  const firstLetter = firstName.CharAt(0).toLowercase()
+  const firstLetter = firstName.charAt(0).toLowerCase()
   if (firstLetter === 'a') {
     return 'Jeff'
 } else if(firstLetter === 'b') {
@@ -34,7 +34,7 @@ return 'dom'
 
 //gen middle name 
 
-function genMiddleName (roadType, favColor, ) {
+function genMiddleName (roadType, favColor) {
 if (roadType === 'Road'){
     return `${favColor}ridge`
 } else if (roadType === 'Street') {
@@ -49,7 +49,7 @@ if (roadType === 'Road'){
 }
 
 function getLastName (lastName){
-    const lastLetter = lastName.charAt(lastName.length-1).toLowercase()
+    const lastLetter = lastName.charAt(lastName.length-1).toLowerCase()
 if (lastLetter === 'a'){
     return 'shadow'
 } else if(lastLetter === 'b'){
@@ -103,7 +103,7 @@ document.getElementById('result').textContent = fullName
 
 //capitalizer
 
-function Capitalize (word) {
+function capitalize(word) {
 
 return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
 
