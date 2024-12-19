@@ -1,7 +1,51 @@
-html {
+ {
     background-color: rgb(44, 98, 160);
 }
 
-#btn {
+ {
     background-color:rgb(230, 175, 73);
+}
+
+body {
+    background-color: #f0e68c;
+    font-family: 'Comic Neue', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+#fantform {
+    background-color: #ffcccb;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+.form-label {
+    color: #ff5733;
+    font-weight: bold;
+}
+.form-control, .form-select {
+    border: 2px solid #ff5733;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    transition: border-color 0.3s;
+}
+.form-control:focus, .form-select:focus {
+    border-color: #33ff57;
+    outline: none;
+}
+#btn {
+    background-color: #33ff57;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#btn:hover {
+    background-color: #28a745;
 }

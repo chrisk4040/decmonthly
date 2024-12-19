@@ -20,56 +20,66 @@
         <!-- ========== intro and greetings ========== -->
 
 
-        <div class="container text-light">
-            <div class="text-center mb-4">
-                <h1 class="text-light">Whats your Fantasy hero name?</h1>
-                <p class="text-light">fill out form </p>
+        <div class="container text-light d-flex justify-content-center align-items-center">
+            <div class="row  ">
+
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <h1 class="text-light">What's your Fantasy hero name?</h1>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-12  d-flex justify-content-center align-items-center">
+                        <form id="fantform" class="mb-4">
+                            <div class="mb-3">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName"
+                                    placeholder="Enter Your First Name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName"
+                                    placeholder="Enter Your Last Name">
+                            </div>
+                            <!-- ========== get road type ========== -->
+                            <div class="mb-3">
+                                <label for="roadtype" class="form-label">Choose road type</label>
+                                <select name="roadtype" id="roadType" class="form-select">
+                                    <option value="road">Road</option>
+                                    <option value="street">Street</option>
+                                    <option value="drive">Drive</option>
+                                    <option value="court">Court</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="favoritecolor" class="form-label">Favorite color</label>
+                                <input type="text" class="form-control" id="favoriteColor"
+                                    placeholder="Enter Your Favorite Color">
+                            </div>
+                            <div class="mb-3">
+                                <label for="favanimal" class="form-label">Favorite Animal</label>
+                                <input type="text" class="form-control" id="favAnimal"
+                                    placeholder="Enter Your Favorite Animal">
+                            </div>
+                            <button type="button" class="btn btn-primary w-100" id="btn" onclick="genFullName()">
+                                Generate
+                                Name </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- ========== form ========== -->
+
             </div>
 
-            <!-- ========== form ========== -->
-            <form id="fantform" class="mb-4">
-                <div class="mb-3">
-                    <label for="firstName" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="Enter Your First Name">
-                </div>
-                <div class="mb-3">
-                    <label for="lastName" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="Enter Your Last Name">
-                </div>
-                <!-- ========== get road type ========== -->
-                <div class="mb-3">
-                    <label for="roadtype" class="form-label"> choose road type</label>
-                    <select name="roadtype" id="roadType" class="form-select">
-                        <option value="road">Road</option>
-                        <option value="street">Street</option>
-                        <option value="drive">Drive</option>
-                        <option value="court">Court</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="favoritecolor" class="form-label">Favorite color</label>
-                    <input type="text" class="form-control" id="favoriteColor" placeholder="Enter Your Favorite Color">
-                </div>
-                <div class="mb-3">
-                    <label for="favanimal" class="form-label">Favorite Animal</label>
-                    <input type="text" class="form-control" id="favAnimal" placeholder="Enter Your Favorite Animal">
-                </div>
-                <div type="submit" class="btn btn-primary w-100" id="btn" onclick="genFullName()"> Generate Name
-                </div>
-            </form>
+            <!-- ========== display box ========== -->
+
+            <div id="result" class="text-light text-center"></div>
 
 
 
-        </div>
-
-        <!-- ========== display box ========== -->
-
-        <div id="result" class="text-light text-center"></div>
-
-
-
-        <!-- =========display box ========== -->
+            <!-- =========display box ========== -->
 
 
 
